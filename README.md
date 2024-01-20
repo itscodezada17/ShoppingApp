@@ -1,7 +1,7 @@
 # Shopping App
 It is a shopping Android application.
 
-#API Used- https://fakestoreapi.com/
+**API Used- https://fakestoreapi.com/
 
 # Features
 1. Products List Page (List Of Products(having an Image, name and price and add to cart button))
@@ -30,13 +30,16 @@ It is a shopping Android application.
 # ScreenShots
 
 
+https://github.com/itscodezada17/ShoppingApp/assets/63585669/6013b15e-9b04-4dee-9312-67033882e974
 
-<code><img height=400  src="" alt="ss2"></code>
-<img height=400  src="" alt="ss2">
-<img height=400  src="" alt="ss2">
+
+<code><img height=400  src="https://github.com/itscodezada17/ShoppingApp/blob/e45ebb8feff0ab2a6606cb7e32ff7c3472ae7b9a/productList.png" alt="ss2"></code>
+<img height=400  src="https://github.com/itscodezada17/ShoppingApp/blob/e45ebb8feff0ab2a6606cb7e32ff7c3472ae7b9a/productDetail.png" alt="ss2">
+<img height=400  src="https://github.com/itscodezada17/ShoppingApp/blob/e45ebb8feff0ab2a6606cb7e32ff7c3472ae7b9a/cart.png" alt="ss2">
+<img height=400  src="https://github.com/itscodezada17/ShoppingApp/blob/e45ebb8feff0ab2a6606cb7e32ff7c3472ae7b9a/checkout.png" alt="ss2">
 
   
 # APK 
-  APK - <a href="" alt="APK Link"><img src="https://img.shields.io/badge/APK-DownLoadApk-yellowgreen"></a>
+  APK - <a href="https://github.com/itscodezada17/ShoppingApp/blob/e45ebb8feff0ab2a6606cb7e32ff7c3472ae7b9a/ShoppingApp.apk" alt="APK Link"><img src="https://img.shields.io/badge/APK-DownLoadApk-yellowgreen"></a>
   
   Click on the button above and download from there.
