@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:background">@color/cardview_light_background</item>
+        <item name="colorPrimary">#D64F24</item>
+        <item name="android:textColorSecondary">#FFC107</item>
+    </style>
+</resources>

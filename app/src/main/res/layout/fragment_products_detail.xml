@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="item"
+            type="com.ujjwal.sneakers.commonDataModels.ProductItem" />
+        <variable
+            name="callBack"
+            type="com.ujjwal.sneakers.productsDetails.clickCallBacks.ProductDetailsCallBack" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_light_background">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tabLayout"
+            android:layout_width="0dp"
+            android:background="@color/cardview_light_background"
+            android:layout_height="46dp"
+            app:title="@string/cart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/track_back_arrow"
+            app:titleTextColor="@color/white" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sneakerImage"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            imageUrl="@{item.media}"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detailsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sneakerImage"
+            android:background="@drawable/bg_details_card">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:padding="15dp"
+                android:id="@+id/nameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.name}"
+                android:textSize="28sp"
+                android:layout_marginStart="46dp"
+                android:layout_marginEnd="46dp"
+                app:layout_constraintBottom_toTopOf="@+id/descriptionTv"
+                app:layout_constraintLeft_toLeftOf="@id/guideLineStart"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.title}"
+                android:textSize="14sp"
+                android:gravity="start"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="46dp"
+                android:padding="4dp"
+                app:layout_constraintBottom_toTopOf="@id/priceeTv"
+                app:layout_constraintLeft_toLeftOf="@id/guideLineStart"
+                android:layout_marginEnd="46dp"/>
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/size"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Size: "-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_marginBottom="25dp"-->
+<!--                android:padding="4dp"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/color"-->
+<!--                app:layout_constraintLeft_toRightOf="@id/guideLineStart"/>-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/size7"-->
+<!--                android:text="7"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:onClick="@{()->callBack.selectSize(String.valueOf(7))}"-->
+<!--                android:clickable="true"-->
+<!--                android:background="@drawable/bg_rv_item"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                app:layout_constraintRight_toLeftOf="@id/size8"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/color1"/>-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/size8"-->
+<!--                android:text="8"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:onClick="@{()->callBack.selectSize(String.valueOf(8))}"-->
+<!--                android:clickable="true"-->
+<!--                android:background="@drawable/bg_rv_item"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                app:layout_constraintRight_toLeftOf="@id/size9"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/color2"/>-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/size9"-->
+<!--                android:text="9"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:onClick="@{()->callBack.selectSize(String.valueOf(9))}"-->
+<!--                android:clickable="true"-->
+<!--                android:background="@drawable/bg_rv_item"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                app:layout_constraintRight_toRightOf="@id/guidelineEnd"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/color3"/>-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/color"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Color: "-->
+<!--                android:textSize="20sp"-->
+<!--                android:layout_marginBottom="30dp"-->
+<!--                android:padding="4dp"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/priceTv"-->
+<!--                app:layout_constraintLeft_toRightOf="@id/guideLineStart"/>-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/color1"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:onClick="@{()->callBack.selectColor()}"-->
+<!--                android:clickable="true"-->
+<!--                android:background="@drawable/bg_rv_item"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                app:layout_constraintRight_toLeftOf="@id/color2"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/goToCartBtn"/>-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/color2"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:onClick="@{()->callBack.selectColor()}"-->
+<!--                android:clickable="true"-->
+<!--                android:background="@drawable/bg_rv_item"-->
+<!--                android:backgroundTint="#F6E12B"-->
+<!--                app:layout_constraintRight_toLeftOf="@id/color3"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/goToCartBtn"/>-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="60dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/color3"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:textAlignment="center"-->
+<!--                android:onClick="@{()->callBack.selectColor()}"-->
+<!--                android:clickable="true"-->
+<!--                android:background="@drawable/bg_rv_item"-->
+<!--                android:backgroundTint="#2465D6"-->
+<!--                app:layout_constraintRight_toRightOf="@id/guidelineEnd"-->
+<!--                app:layout_constraintBottom_toTopOf="@id/goToCartBtn"/>-->
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/priceeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price: $"
+                android:textSize="22sp"
+                android:padding="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+                app:layout_constraintLeft_toLeftOf="@id/guideLineStart"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/priceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="$150"
+                android:text="@{String.valueOf(item.retailPrice)}"
+                android:textSize="20sp"
+                android:padding="4dp"
+                android:layout_marginLeft="-8dp"
+                app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"
+                app:layout_constraintLeft_toRightOf="@id/priceeTv"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goToCartBtn"
+                android:text="@string/add_to_cart"
+                android:padding="2dp"
+                android:layout_margin="5dp"
+                android:textAlignment="center"
+                android:onClick="@{()->callBack.addToCart(item.id)}"
+                android:clickable="true"
+                android:background="@drawable/bg_rv_item"
+                android:backgroundTint="@color/colorPrimary"
+                app:layout_constraintRight_toRightOf="@id/guidelineEnd"
+                app:layout_constraintBottom_toBottomOf="@id/guideLineBottom"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="46dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="46dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideLineBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="26dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>

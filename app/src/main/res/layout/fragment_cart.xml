@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="callBack"
+            type="com.ujjwal.sneakers.cart.callBacks.CartCallBacks" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_light_background">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tabLayout"
+            android:layout_width="0dp"
+            android:background="@color/cardview_light_background"
+            android:layout_height="46dp"
+            app:navigationIcon="@drawable/track_back_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <RelativeLayout
+            android:id="@+id/listCardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/rl2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/courseDetailsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/mainBackgroundAndBlockBackground"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/listCardView"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideLineStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/priceeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total: $"
+                android:textSize="22sp"
+                android:padding="4dp"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/priceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="0"
+                android:textSize="20sp"
+                android:padding="4dp"
+                android:layout_marginLeft="-8dp"
+                app:layout_constraintLeft_toRightOf="@id/priceeTv"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goToCartBtn"
+                android:text="@string/proceed_to_pay"
+                android:padding="2dp"
+                android:layout_margin="5dp"
+                android:textAlignment="center"
+                android:onClick="@{()->  callBack.navigateToPaymentFragment()}"
+                android:clickable="true"
+                android:background="@drawable/bg_rv_item"
+                android:backgroundTint="@color/colorPrimary"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="46dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="46dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideLineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="26dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

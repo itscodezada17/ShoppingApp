@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="item"
+            type="com.ujjwal.sneakers.commonDataModels.ProductItem" />
+        <variable
+            name="callBack"
+            type="com.ujjwal.sneakers.cart.callBacks.CartCallBacks" />
+    </data>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/cardview_light_background"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        imageUrl="@{item.media}"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.name}"
+                        android:hint="Nike Air Jordan"
+                        android:padding="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/imageUrl"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/retailPriceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price"
+                        android:padding="8dp"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/name"
+                        app:layout_constraintRight_toLeftOf="@+id/retailPrice"
+                        app:layout_constraintLeft_toLeftOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/retailPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{String.valueOf(item.retailPrice)}"
+                        android:padding="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/name"
+                        app:layout_constraintLeft_toRightOf="@+id/retailPriceTv"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Cross Button -->
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_gravity="top|end"
+            android:layout_marginEnd="20dp"
+            android:onClick="@{() -> callBack.removeFromCart(item)}"/>
+
+    </FrameLayout>
+
+</layout>
