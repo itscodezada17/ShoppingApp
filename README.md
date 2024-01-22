@@ -31,6 +31,10 @@ It is a shopping Android application.
 
 
 
+
+https://github.com/itscodezada17/ShoppingApp/assets/63585669/9cad550f-834e-4470-8146-c3b60a3e2672
+
+
 https://github.com/itscodezada17/ShoppingApp/assets/63585669/b9f5fdaa-657d-4d8a-8dbd-e869738f370d
 
 
