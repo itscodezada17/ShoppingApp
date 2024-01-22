@@ -7,7 +7,7 @@ It is a shopping Android application.
 1. Products List Page (List Of Products(having an Image, name and price and add to cart button))
 2. Cart Page (List of products in cart with total price , remove from cart implemented locally)
 3. Item Detail Page ((having an Image, name, Description, price and add to cart button))
-4. CheckOut Page (Just a Simple Ui showing a text)
+4. CheckOut Page (Showing a pdf using webView)
 
 # Technologies Used
 1. LANGUAGE : Kotlin , XML
@@ -30,7 +30,8 @@ It is a shopping Android application.
 # ScreenShots
 
 
-https://github.com/itscodezada17/ShoppingApp/assets/63585669/6013b15e-9b04-4dee-9312-67033882e974
+
+https://github.com/itscodezada17/ShoppingApp/assets/63585669/b9f5fdaa-657d-4d8a-8dbd-e869738f370d
 
 
 <code><img height=400  src="https://github.com/itscodezada17/ShoppingApp/blob/e45ebb8feff0ab2a6606cb7e32ff7c3472ae7b9a/productList.png" alt="ss2"></code>
@@ -40,6 +41,6 @@ https://github.com/itscodezada17/ShoppingApp/assets/63585669/6013b15e-9b04-4dee-
 
   
 # APK 
-  APK - <a href="https://github.com/itscodezada17/ShoppingApp/blob/e45ebb8feff0ab2a6606cb7e32ff7c3472ae7b9a/ShoppingApp.apk" alt="APK Link"><img src="https://img.shields.io/badge/APK-DownLoadApk-yellowgreen"></a>
+  APK - <a href="https://github.com/itscodezada17/ShoppingApp/blob/88e677a64f79e0fe044efdae6079ab17a065196a/ShoppingApp.apk" alt="APK Link"><img src="https://img.shields.io/badge/APK-DownLoadApk-yellowgreen"></a>
   
   Click on the button above and download from there.
