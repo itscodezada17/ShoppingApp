@@ -86,4 +86,11 @@ dependencies {
     //Timber Logs safe
     implementation("com.jakewharton.timber:timber:5.0.1")
 
+
+    //Pdf view (library dependency for barketc pdf viewer on maven because jcenter is not working)
+    //implementation ("com.github.mhiew:android-pdf-viewer:2.8.2")
+
+
+
+
 }
